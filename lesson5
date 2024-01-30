@@ -1,0 +1,107 @@
+
+import java.util.Scanner;
+import java.util.Random;
+
+  public class Main {
+      public static void f1() {
+          Scanner scan = new Scanner(System.in);
+          System.out.println("Enter your name:");  
+          String name = scan.nextLine();
+          System.out.println("Hello " + name);
+   }
+    
+    public static void f2(int number) {
+      System.out.println(number/5);
+    }
+    
+    static int f3(int x,int y) {
+       return x*y;
+  }
+
+    static int f4(int num1,int num2,int num3){
+     int all =(num1+num2+num3);
+       System.out.println(num1+num2+num3);
+      return all/3;
+    }
+    
+  static void f5(int r){
+     double p  = 2*r*3.14;
+      System.out.println(p);
+      double s  = r*r*3.14;
+      System.out.println(s);
+    }
+
+    static double f6(int a,int b){
+      int c = (a*a+b*b);
+      double c1 = Math.sqrt(c);
+      return c1;
+
+    }
+    
+    static void f7(char a, char b, char c ){
+        System.out.print(c+""+b+""+a);
+    }
+
+
+      static double f8(int a, int d, int n){
+          int nthTerm = a + ((n - 1) * d);
+          return nthTerm;
+      }
+    
+       static int f9(String str){
+        return str.length()*str.length();
+    }
+      
+      static String f10(String str, String str2){
+          if (str.length() > str2.length()){
+            return str;
+          }else{
+            return str2;
+          }
+
+        }
+
+    static boolean f11(String str,int num){
+         if (str.length()==(num)){
+           return true;
+         }else{
+           return false;
+         }
+    }
+          static boolean f12() {
+          Random rand = new Random();
+          int num1 = rand.nextInt(6) + 1;
+          int num2 = rand.nextInt(6) + 1; 
+          return num1 == num2; 
+      }
+    static boolean f13(char tav){
+       Scanner scan = new Scanner(System.in);
+      System.out.println("Enter 4 chars into string:");  
+      String str = scan.nextLine();
+      if ((str.charAt(0)== tav)||(str.charAt(1)== tav)||(str.charAt(2)== tav)||(str.charAt(3)== tav)){
+        return true;
+      }else{
+        return false;
+      }
+    }
+
+    
+    public static void main(String[] args) {
+      f1();
+      f2(30);
+      System.out.println(f3(3,4));
+      System.out.println(f4(3,4,6)); 
+      f5(6); 
+      System.out.println(f6(2,10)); 
+      f7('l','o','t'); 
+      System.out.println(f9("Hello")); 
+      System.out.println(f8(2,5,2));
+      System.out.println(f10("Hello","Hi"));
+      System.out.println(f11("hello",5));
+      System.out.println(f12());
+      System.out.println(f13('l'));
+    }
+    }
+
+
+
