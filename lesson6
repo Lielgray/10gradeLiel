@@ -1,0 +1,206 @@
+
+import javax.swing.plaf.synth.SynthOptionPaneUI;
+import java.util.Scanner;
+public class lesson6loops {
+    public static void f1() {
+        Scanner scan = new Scanner(System.in);
+        int i = 0;
+        int sum = 0;
+        for (i = 0; i < 5; i++) {
+            System.out.println("enter your garde");
+            int grade = scan.nextInt();
+            sum += grade;
+
+        }
+        double avg = (sum / 5);
+        System.out.println("your avg is: " + avg);
+    }
+
+    public static void f2() {
+        Scanner scan = new Scanner(System.in);
+        int wordcount = 0;
+        System.out.println("enter str");
+        while (true) {
+            String str = scan.nextLine();
+            if (str.equals("enter")) {
+                wordcount++;
+                break;
+            }
+            wordcount++;
+        }
+        System.out.println(wordcount);
+
+    }
+
+    public static void f3(String code) {
+        Scanner scan = new Scanner(System.in);
+        int i = 0;
+        do {
+            System.out.println("enter to check code");
+            String strcode = scan.nextLine();
+            if (strcode.equals(code)) {
+                System.out.println("how much money!");
+
+                return;
+            } else {
+                i++;
+            }
+
+        } while (i < 3);
+        System.out.println("error");
+    }
+
+    static void f4(int num) {
+        int cal = 0;
+        int sum = 0;
+        while (num > 0) {
+            cal = num % 10;
+            sum += 1;
+            num /= 10;
+
+        }
+        System.out.println(sum);
+    }
+
+    static int f5(int num) {
+        int cal = 0;
+        int sum = 0;
+        while (num > 0) {
+            cal = num % 10;
+            sum += cal;
+            num /= 10;
+        }
+        return sum;
+    }
+
+    static void f6(String str) {
+        String reverse = "";
+        for (int i = str.length() - 1; i >= 0; i--) {
+            reverse += str.charAt(i);
+        }
+        if (str.equals(reverse)) {
+            System.out.println(str + " is a palindrome");
+        } else {
+            System.out.println(str + " is not a palindrome");
+        }
+    }
+
+    static void f7(int num) {
+        for (int i = 1; i <= num - 1; i++) {
+            if (num % i == 0) {
+                System.out.print(i + ",");
+
+            }
+        }
+        System.out.print(num);
+    }
+
+    static void f8() {
+
+        for (int i = 1; i <= 10; i++) {
+            for (int j = 1; j <= 10; j++) {
+                System.out.print(i * j + "\t");
+
+            }
+
+            System.out.println();
+        }
+    }
+
+    static void f9() {
+        Scanner scan = new Scanner(System.in);
+        for (int i = 0; i <= 7; i++) {
+            System.out.println("enter score");
+            int score = scan.nextInt();
+        }
+
+
+    }
+
+    static boolean f10(int num) {
+
+        int a = 1;
+        int b = 1;
+        while (a <=num) {
+            if (a == num || b == num)
+                return true;
+            a = a + b;
+            b = b - a;
+
+        }
+        return false;
+    }
+
+    static void f11(int num, int num2){
+     int sum = 0;
+     for(int i = 1; i<=num2; i++){
+         sum +=num;
+
+     }
+     System.out.println(sum);
+
+    }
+
+    static void f12(int hight){
+        for(int i=1; i<=hight; i++){
+            for (int j = 1; j <= i; j++) {
+                System.out.print("*");
+            }
+
+            System.out.println();
+        }
+
+
+    }
+    public static void f13(int a1 , int d , int n){
+        for (int i=1; i<=n; i++){
+            int An ;
+           An= (i-1)*d+a1;
+           System.out.println(An);
+
+        }
+
+    }
+
+
+static void f14(int start,int end){
+        int a=1;
+        int b=1;
+
+        while(a<end) {
+            if(a>start){
+                System.out.print(a +" "+b+" ");
+            }
+            a = a + b;
+            b = a + b;
+
+        }
+}
+
+
+
+
+
+
+    public static void main(String[] args) {
+f1();
+f2();
+        f3("1234");
+     System.out.println(f5(320));
+     f4(123);
+f6("ollo");
+f7(24);
+f8();
+        System.out.println(f10(1));
+        f11(5,4);
+f12(3);
+f13(5,4,6); 
+f14(1,5);
+
+
+
+    }
+}
+
+
+
