@@ -1,0 +1,234 @@
+import java.util.Scanner;
+import java.util.Random;
+
+
+public class lesson12arrays2D {
+    public static void f1(int[][] arr1) {
+        Random random = new Random();
+        for (int i = 0; i < arr1.length; i++) {
+            for (int j = 0; j < arr1[i].length; j++) {
+                arr1[i][j] = random.nextInt(100);
+                System.out.print(arr1[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+
+
+    public static void f2() {
+        Scanner scan = new Scanner(System.in);
+        int rows = 3;
+        int columns = 3;
+        int max = 0;
+        int min = 0;
+        int[][] arr2 = new int[rows][columns];
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < columns; j++) {
+                System.out.print("Enter element at position 100-0 [" + i + "][" + j + "]: ");
+                arr2[i][j] = scan.nextInt();
+                min += arr2[i][j];
+
+            }
+            if (min > max) {
+                max = min;
+                min = 0;
+            }
+
+        }
+        System.out.println("the biggest sum of a row is " + max);
+        System.out.println("The 2D array is:");
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < columns; j++) {
+                System.out.print(arr2[i][j] + " ");
+
+            }
+            System.out.println();
+        }
+
+    }
+
+
+/*public static void f3(){
+    int sum=0;
+    int[][] arr1 = new int[rowcolumns][rowcolumns];
+    int[][] arr2 = new int[rowcolumns][rowcolumns];
+    int[][] arr3 = new int[rowcolumns][rowcolumns];
+    Random random = new Random();
+    for (int i = 0; i < arr3.length; i++) {
+        for (int j = 0; j < arr3[i].length; j++) {
+            sum[i][j] = arr1[i][j] + arr2[i][j];
+        }
+    }
+
+    System.out.println("first matrix");
+    for (int i = 0; i < arr1.length; i++) {
+        for (int j = 0; j < arr1[i].length; j++) {
+            arr1[i][j] = random.nextInt(100);
+            System.out.print(arr1[i][j] + " ");
+
+        }
+        System.out.print();
+    }
+
+        for(int i=0; i< arr2.length; i++) {
+            for (int j = 0; j < arr2[i].length; j++) {
+                arr2[i][j] = random.nextInt(100);
+                System.out.print(arr2[i][j] + " ");
+
+            }
+            System.out.println();
+        }
+
+
+    }*/
+
+    public static void f4(int num) {
+        int[][] arr1 = new int[num][num];
+        int[][] arr2 = new int[num][num];
+        Random random = new Random();
+        for (int i = 0; i < arr1.length; i++) {
+            for (int j = 0; j < arr1[i].length; j++) {
+                arr1[i][j] = random.nextInt(100);
+                System.out.print(arr1[i][j] + " ");
+            }
+            System.out.println();
+
+        }
+        System.out.println();
+        for (int i = 0; i < arr2.length; i++) {
+            for (int j = 0; j < arr2[i].length; j++) {
+                arr2[i][j] = arr1[j][i];
+                System.out.print(arr2[i][j] + " ");
+            }
+            System.out.println();
+
+        }
+
+    }
+
+
+    public static boolean f6(int[][] arr) {
+        int sum = 0;
+        int sum2 = 0;
+        int sum3 = 0;
+
+        for (int i = 0; i < arr.length - 2; i++) {
+            for (int j = 0; j < arr[i].length; j++) {
+
+                sum += arr[i][j];
+            }
+
+        }
+        System.out.println(sum);
+
+
+        for (int i = 1; i < arr.length - 1; i++) {
+            for (int j = 0; j < arr[i].length; j++) {
+
+                sum2 += arr[i][j];
+            }
+
+        }
+        System.out.println(sum2);
+
+        for (int i = 2; i < arr.length; i++) {
+            for (int j = 0; j < arr[i].length; j++) {
+
+                sum3 += arr[i][j];
+            }
+
+        }
+        System.out.println(sum3);
+
+        if (sum < sum2 && sum2 < sum3) {
+            return true;
+        }
+
+        return false;
+
+    }
+
+
+    public static void f5(int[][] arr) {
+        int sum = 0;
+         for (int i = 0; i < 3; i++) {
+           sum+=arr[i][i];
+
+         }
+      System.out.println("first sum:  " + sum);
+       sum=0;
+        for (int i = 0; i < arr.length; i++) {
+            sum += arr[i][arr.length - 1 - i];
+
+            }
+        System.out.println("second sum:  " + sum);
+    }
+
+
+
+
+public static void f8(char[][] arr){
+    System.out.println("befor: ");
+    for(int i=0; i< arr.length; i++){
+        for(int j=0; j<arr[i].length; j++){
+            System.out.print(arr[i][j] + " ");
+        }
+        System.out.println();
+
+
+    }
+    System.out.println("after: ");
+
+    for (int i = 0; i < arr.length-1; i++) {
+        for (int j = i + 1; j < arr.length; j++) {
+            String name1 = new String(arr[i]);
+            String name2 = new String(arr[j]);
+            if (name1.compareTo(name2) > 0) {
+                char[] str3 = arr[i];
+                arr[i] = arr[j];
+                arr[j] = str3;
+            }
+        }
+    }
+
+}
+    public static void printMatrix(char[][] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i].length; j++) {
+                System.out.print(arr[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+
+
+    public static void main(String[] args) {
+       /* f0();
+        f1(new int[4][3]);
+        f2();
+        f4(3);
+      int[][] arr= {
+                {2, 4, 6},
+                {1, 7, 8},
+                {0, 40, 5}
+        };
+
+        System.out.println(f6(arr));
+    int[][]arr= {
+            {4,7,8},
+            {9,1,2},
+            {5,6,4},
+
+    };
+    f5(arr);
+    char[][] arr= {
+        {'w', 'i', 'e'},
+        {'t', 'o', 'm'},
+        {'n', 'f', 'o', 'r'}
+};
+f8(arr);
+printMatrix(arr);*/
+
+    }
+
+}
