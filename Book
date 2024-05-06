@@ -1,0 +1,18 @@
+
+
+public class Book {
+    private String _name,_author;
+    private int _categoryNumber;
+
+
+ public Book(String name,String author, int categoryNumber){
+  _name= name;
+  _author=author;
+  _categoryNumber=categoryNumber;
+
+}
+
+    public String toString() {
+        return (_name+" "+_author+" "+_categoryNumber);
+    }
+}
