@@ -1,0 +1,37 @@
+
+
+public class ArithmeticProgression {
+private int _firstMember,_difference;
+
+public ArithmeticProgression(int FM,int diff){
+  _firstMember=FM;
+  _difference=diff;
+
+}
+public void printGeneralSeries(){
+  System.out.println("An=A1+(n-1)d");
+}
+
+public int memberCalculation(int n){
+  int An= _firstMember+(n-1)*_difference;
+
+return An;
+}
+
+
+  public int calculateN(int an) {
+    int n = (an - _firstMember) / _difference + 1;
+    int check = _firstMember + (n - 1) * _difference;
+    if (check == an) {
+      return n;
+    }
+      return -1;
+}
+
+public String toString(){
+return "An = " + _firstMember + " + (n - 1) * " + _difference;
+
+}
+
+}
+
