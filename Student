@@ -1,0 +1,15 @@
+public class Student {
+private  String _privateName,_lastName;
+private int _id;
+
+public Student(String privateName,String lastName,int id){
+    _privateName=privateName;
+    _lastName=lastName;
+    _id=id;
+}
+    public String toString(){
+        return _privateName + " " + _lastName+" "+_id;
+
+    }
+
+}
