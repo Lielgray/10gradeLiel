@@ -1,0 +1,25 @@
+package lesson7classes;
+
+public class Tester {
+    public static void main(String[] args)
+    {
+       /* ArithmeticProgression progression = new ArithmeticProgression(1,2);
+        progression.printGeneralSeries();
+        System.out.println(progression.memberCalculation(4));
+        ArithmeticProgression ap = new ArithmeticProgression(2, 3);
+        System.out.println(ap.calculateN(8));
+        System.out.println(ap.calculateN(10));
+        String formula = progression.toString();
+        System.out.println(formula);
+
+        Student student = new Student("liel", "gray", 12345);
+        String studantinfo = student.toString();
+        System.out.println(studantinfo);
+
+        Book book= new Book("liel","gray",1456);
+        String bookinfo = book.toString();
+        System.out.println(bookinfo);*/
+
+    }
+
+}
